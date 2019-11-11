@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 @RestController
-public class TestController {
+public class MessageController {
 
     @RequestMapping("/message*")
-    public String testme() {
-        throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+    public String message() {
+        throw new ResponseStatusException(HttpStatus.I_AM_A_TEAPOT);
     }
 }
