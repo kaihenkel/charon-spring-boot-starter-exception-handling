@@ -12,16 +12,6 @@ public class TestForwardingInterseptor implements RequestForwardingInterceptor {
 
     @Override
     public HttpResponse forward(HttpRequest request, HttpRequestExecution execution) {
-        if (request.getURI().getPath().startsWith("/testexample")) {
-            HttpResponse response = new HttpResponse(HttpStatus.FOUND);
-            response.getHeaders().setLocation(
-                UriComponentsBuilder.fromUri(request.getURI())
-                    .replacePath("/example")
-                    .build(true)
-                    .toUri()
-            );
-            return response;
-        }
         if (request.getURI().getPath().startsWith("/testerror")) {
             throw new ResponseStatusException(HttpStatus.I_AM_A_TEAPOT);
         }

@@ -44,7 +44,9 @@ public class ErrorController extends BasicErrorController {
     @Override
     protected Map<String, Object> getErrorAttributes(HttpServletRequest request, boolean includeStackTrace) {
         Map<String, Object> attributes =  super.getErrorAttributes(request, includeStackTrace);
-        attributes.put("status", getStatus(request).value());
+        HttpStatus status = getStatus(request);
+        attributes.put("status", status.value());
+        attributes.put("error", status.getReasonPhrase());
         return attributes;
     }
 }
