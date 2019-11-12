@@ -1,10 +1,10 @@
-package com.example.rest.configuraiton;
+package com.example.configuraiton;
 
 import com.github.mkopylec.charon.configuration.CharonConfigurer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import static com.example.rest.interseptor.TestForwardingInterceptorConfigurer.testForwardingInterceptor;
+import static com.example.interseptor.TestForwardingInterceptorConfigurer.testForwardingInterceptor;
 import static com.github.mkopylec.charon.configuration.CharonConfigurer.charonConfiguration;
 import static com.github.mkopylec.charon.configuration.RequestMappingConfigurer.requestMapping;
 import static com.github.mkopylec.charon.forwarding.interceptors.rewrite.RequestServerNameRewriterConfigurer.requestServerNameRewriter;

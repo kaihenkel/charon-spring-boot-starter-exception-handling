@@ -1,4 +1,4 @@
-package com.example.rest.interseptor;
+package com.example.interseptor;
 
 import com.github.mkopylec.charon.forwarding.interceptors.*;
 import org.slf4j.Logger;
