@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title th:text="${'Teapot ' + status}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            color: #333;
+            font-family: sans-serif;
+            font-size: .875rem;
+            line-height: 1.375;
+        }
+
+        a {
+            color: #066089;
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: 1.25rem;
+            line-height: 1.375;
+        }
+
+        .col {
+            margin: 1rem .5rem;
+        }
+
+        @media (min-width: 768px) {
+            .col {
+                margin: 1rem auto;
+                width: 50%;
+            }
+        }
+
+        table {
+            font-size: 8pt;
+        }
+    </style>
+</head>
+<body>
+<div class="col">
+    <h1 th:text="${message}" />
+    <p>
+        This is the Teapot error page
+    </p>
+    <table>
+        <tr>
+            <td>Date</td>
+            <td th:text="${timestamp}"/>
+        </tr>
+        <tr>
+            <td>Path</td>
+            <td th:text="${path}"/>
+        </tr>
+        <tr>
+            <td>Error</td>
+            <td th:text="${error}"/>
+        </tr>
+        <tr>
+            <td>Status</td>
+            <td th:text="${status}"/>
+        </tr>
+        <tr>
+            <td>Message</td>
+            <td th:text="${message}"/>
+        </tr>
+        <tr>
+            <td>Exception</td>
+            <td th:text="${exception}"/>
+        </tr>
+        <tr>
+            <td>Trace</td>
+            <td>
+                <pre th:text="${trace}"/>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
