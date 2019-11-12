@@ -1,7 +1,10 @@
 # charon-spring-boot-starter-exception-handling
 A Desired Exception Handling example
 
-This is a simple maven based  example project to demonstrate the problem.
+This is a simple maven based  example project to demonstrate the problem when throwing an exception from
+within the [charon-spring-boot-starter reverse-proxy](https://github.com/mkopylec/charon-spring-boot-starter/).
+
+The initial problem is discussed within the [issue-report](https://github.com/mkopylec/charon-spring-boot-starter/issues/97) there.
 
 ## The Idea:
 
